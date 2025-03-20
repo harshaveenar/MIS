@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+
+    <h2>Student Feedback</h2>
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+        <textarea id="feedback" placeholder="Your Feedback" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="response"></p>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("response").innerText = "✅ Feedback submitted!";
+        });
+    </script>
+
+</body>
+</html>
