@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Ad Rotator</title>
+</head>
+<body>
+
+    <img id="adImage" src="hotel1.jpg" width="300" height="200">
+
+    <script>
+        const ads = ["hotel1.jpg", "hotel2.jpg", "hotel3.jpg"];
+        let index = 0;
+
+        function rotateAd() {
+            index = (index + 1) % ads.length;
+            document.getElementById("adImage").src = ads[index];
+        }
+
+        setInterval(rotateAd, 3000); // Change ad every 3 seconds
+    </script>
+
+</body>
+</html>
