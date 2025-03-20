@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility</title>
+</head>
+<body>
+
+    <h2>Check Voting Eligibility</h2>
+    <input type="date" id="dob">
+    <button onclick="checkEligibility()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkEligibility() {
+            let birthYear = new Date(document.getElementById("dob").value).getFullYear();
+            let age = new Date().getFullYear() - birthYear;
+            document.getElementById("result").innerText = age >= 18 ? "✅ Eligible to vote!" : `❌ Wait ${18 - age} years.`;
+        }
+    </script>
+
+</body>
+</html>
