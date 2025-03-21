@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Employees with Salary > 80000</h2>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td>90000</td>
+    </tr>
+    <tr>
+        <td>Charlie</td>
+        <td>120000</td>
+    </tr>
+</table>
+
+</body>
+</html>
