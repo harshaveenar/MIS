@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal Access</title>
+</head>
+<body>
+
+    <h2>Login to Access Portal</h2>
+
+    <label>Select Designation:</label>
+    <select id="role">
+        <option value="partner">Partner</option>
+        <option value="manager">Manager</option>
+        <option value="employee">Employee</option>
+    </select>
+
+    <button onclick="checkAccess()">Login</button>
+
+    <h3 id="accessMessage"></h3>
+
+    <script>
+        function checkAccess() {
+            let role = document.getElementById("role").value;
+            let message = "";
+
+            if (role === "partner") {
+                message = "Access granted to Company Portal.";
+            } else if (role === "manager" || role === "employee") {
+                message = "Access granted to Department Portal.";
+            } else {
+                message = "Access Denied!";
+            }
+
+            document.getElementById("accessMessage").innerText = message;
+        }
+    </script>
+
+</body>
+</html>
