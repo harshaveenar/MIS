@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG Admission Form</title>
+</head>
+<body>
+
+    <h2>PG Admission Form</h2>
+
+    <form>
+        <label>Name:</label>
+        <input type="text" required><br><br>
+
+        <label>Undergraduate Degree:</label>
+        <input type="text" required><br><br>
+
+        <label>CGPA:</label>
+        <input type="number" step="0.01" required><br><br>
+
+        <label>Preferred Course:</label>
+        <select>
+            <option>MS Computer Science</option>
+            <option>MBA</option>
+            <option>M.Tech</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
