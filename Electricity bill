@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+
+    <h2>Electricity Bill Calculator</h2>
+
+    <label>Units Consumed:</label>
+    <input type="number" id="units" required><br><br>
+
+    <button onclick="calculateBill()">Calculate</button>
+
+    <h3>Total Bill: ₹<span id="billAmount">0</span></h3>
+
+    <script>
+        function calculateBill() { 
+            let units = document.getElementById("units").value;
+            let rate = 5; // ₹5 per unit
+            let bill = units * rate;
+            document.getElementById("billAmount").innerText = bill;
+        }
+    </script>
+
+</body>
+</html>
