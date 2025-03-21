@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Check</title>
+</head>
+<body>
+    <h2>Enter DOB:</h2>
+    <input type="date" id="dob">
+    <button onclick="check()">Check</button>
+    <p id="res"></p>
+
+    <script>
+        function check() {
+            let age = new Date().getFullYear() - new Date(dob.value).getFullYear();
+            res.innerText = age >= 18 ? "✅ Eligible" : `❌ Wait ${18 - age} yrs`;
+        }
+    </script>
+</body>
+</html>
